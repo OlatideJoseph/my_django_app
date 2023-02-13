@@ -1,0 +1,74 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="og:url" content="{% url 'olatide'%}">
+	<meta name="og:description" content="Olatide Joseph Adeniyi is a Python Web Developer(Flask,Django) ,Dataminer">
+	<meta name="og:image" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=yes">
+	<title>Olatide Joseph Adeniyi (O.J.A)</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'olatide.css' %}">
+</head>
+<body>
+	<section id='content-section'>
+		<div class='image-about-details'>
+			<img id="profile-image" src="{% static 'images/olatideadeniyi.jpg'%}">
+			<p>
+				A computer science student ,tech enthusiast who is passionate in learning<wbr>
+				j
+			</p>
+			
+		</div>
+		<div id="info">
+			<header>Details...</header>
+			<ul>
+				<blockquote>
+					<li id="name">Name : <em>Adeniyi Olatide Joseph</em></li>
+					<li id="email">Email : <em>olatidejoseph17@gmail.com</em></li>
+					<li id="contact">Contact : <em>+234 9074023545</em></li>
+					<li id="facebook">Facebook : <em>Adeniyi Olatide Joseph</em></li>
+					<li id="twitter">Twitter : <a href="https://twitter.com/olatidejosepha">OlatideJosepA</a></li>
+					<li id="instagram">Instagram : <a href="https://www.instagram.com/adeniyiolatide">Olatide Joseph</a></li>
+				</blockquote>
+			</ul>
+		</div>
+		<div id="skills">
+			<header>Skills</header>
+			<ul>
+				<blockquote>
+					<li >Python Developer</em></li>
+					<li >Web Developer</li>
+					<li >Web Scraping </li>
+				</blockquote>
+			</ul>
+		</div>
+		<div id="tools">
+			<header>Tools</header>
+			<ul>
+				<blockquote>
+					<li >Python</em></li>
+					<li >Flask</li>
+					<li >Django</em></li>
+					<li >Html</li>
+					<li >Css</a></li>
+				</blockquote>
+			</ul>
+		</div>
+	</section>
+<script type="text/javascript">
+	function windowopener(e){
+		e.preventDefault();
+		window.open(this.href)
+	}
+	var anchor=document.querySelector('a');
+	var anchors=document.querySelectorAll('a');
+
+	for (var a of anchors){
+		a.addEventListener('click',windowopener);
+	}
+	anchor.addEventListener('click',windowopener)
+</script>
+</body>
+</html>
