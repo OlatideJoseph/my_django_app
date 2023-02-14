@@ -1,3 +1,6 @@
+.image-about-details p{
+	display: inline;
+}
 .image-about-details{
 	padding:15px;
 	border-radius: 5px;
@@ -10,20 +13,29 @@ body{
 	background-color: black;
 	color:#D3D3D3;
 	display:flex;
-	flex-direction:column;
-	align-items: center;
+	flex-direction:row;
+	align-items: flex-start;
 	justify-content: center;
 	font-family:monospace ,serif;
 	overflow: scroll;
 }
+#nav{
+	height: 100%;
+	background: burlywood;
+}
 #profile-image{
-	width:100px;
-	height: 100px;
-	border-radius: 50px;
+	width:200px;
+	height: 200px;
+	border-radius: 100px;
 }
 #content-section{
 	padding:5px;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
 }
+
 div{
 	margin-bottom:5px ;
 }
