@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap');
+body{
+	background-color: ghostwhite;
+	font-family: 'Source code pro',monospace;
+	margin: 5%;
+}
+h1{
+	color: springgreen;
+}
+a{
+	color: springgreen;
+}

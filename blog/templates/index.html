@@ -5,12 +5,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/index.css' %}">
 </head>
 <body>
-	{% for post in post_list%}
-		<p>{{post.text}}</p>
-	{% endfor %}
-<a href="{% url 'olatide'%}">Creator Portfolio</a>
+	<div class="body-content">
+		{% for post in post_list%}
+			<div class="blog-div">
+				<a href="{{post.get_absolute_url}}"><h3>{{post.title}}</h3></a>
+				<p>{{post.text}}</p>
+			</div>
+		{% endfor %}
+	</div>
+	<footer>
+		<a href="{% url 'olatide'%}">Creator Portfolio</a>
+	</footer>
 
 </body>
 </html>
