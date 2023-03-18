@@ -9,6 +9,14 @@
 	{% endblock %}
 </head>
 <body>
+	{% if user.is_authenticated%}
+	    <p>Hi, {{ user.username }}</p>
+	    <a href="{% url 'logout' %}"> Log out </a> | 
+	    <a href="{%url 'sign-up'%}">Sign Up</a>
+	{% else%}
+		<p>You are not logged in .</p>
+		<a href="{% url 'login'%}">Click the link to sign in</a>
+	{% endif %}
 	{%block body%}
 	{% endblock %}
 </body>

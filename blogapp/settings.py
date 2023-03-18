@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,5 +122,6 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
+LOGIN_REDIRECT_URL='index'
+LOGOUT_REDIRECT_URL='index'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

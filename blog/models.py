@@ -5,7 +5,7 @@ from django.urls import reverse
 class Post(models.Model):
 	"""Post object from the django model"""
 	title=models.CharField(max_length=200)
-	text=models.TextField()
+	text=models.TextField(unique=True)
 	author=models.ForeignKey("auth.User",on_delete=models.CASCADE)
 	def __str__(self):
 		return self.text[:50]

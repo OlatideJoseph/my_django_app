@@ -1,4 +1,4 @@
-from django.test import TestCase,SimpleTestCase
+from django.test import TestCase#,SimpleTestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from .models import Post
@@ -80,3 +80,28 @@ class BlogTestCase(TestCase):
 		no0_response=self.client.get('post/1000')
 		self.assertEqual(no0_response.status_code,404)
 		self.assertEqual(response.status_code,200)
+
+	def test_post_createview(self):
+		response=self.client.post(reverse('create-post'),
+            {
+            'title':'the test post',
+            'text':'A new test post for the django driven development',
+            'author':self.user.id
+            }
+			)
+		self.assertEqual(response.status_code,302)
+		self.assertEqual(Post.objects.last().title,"the test post")
+		self.assertEqual(Post.objects.last().text,"A new test post for the django driven development")
+	def test_post_updateview(self):
+		response=self.client.post(reverse('edit_post',args="1"),
+            {
+            'title':'The edited blog post',
+            'text':"the blog post content"
+            }
+			)
+		self.assertEqual(response.status_code,302)
+		self.assertEqual(Post.objects.last().title,"The edited blog post")
+		self.assertEqual(Post.objects.last().text,"the blog post content")
+	def test_post_deleteview(self):
+		response=self.client.post(reverse('delete_post',args='1'))
+		self.assertEqual(response.status_code,302)
