@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap');
+body{
+	padding:0;
+	margin:0;
+	font-family:'Source Code Pro', monospace;
+	font-size: 150%;
+	background: ghostwhite ;
+
+}
+footer{
+	background: #562604;
+	padding:10px 20% ;
+	margin-top: 5px;
+}
+footer a{
+	color:skyblue;
+	text-decoration:none;
+}
+.body-content{
+	padding-left:10%;
+	padding-right: 10%;
+}
+.body-content a{
+	color:springgreen;
+	text-decoration: none;
+}
+.blog-div{
+	padding:10px 5px;
+	margin:5px 0;
+}
+.blog-div h3{
+	margin-left:5% 3% 0 0;
+
+}
+.blog-div p{
+	margin:0 0%;
+	line-height: 25px;
+}

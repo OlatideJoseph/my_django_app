@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap');
+.image-about-details p{
+	display: inline;
+}
+.image-about-details{
+	padding:15px;
+	border-radius: 5px;
+	background-color: darkgrey;
+	font-size: 20px;
+	font-weight: bold;
+}
+.image-about-details p{
+	display: block;
+}
+body{
+	/*background-image:url("/static/images/background.a7e06caa56c8.jpg");*/
+	background-color: black;
+	color:#D3D3D3;
+	display:flex;
+	flex-direction:row;
+	align-items: flex-start;
+	justify-content: center;
+	font-family:'Source code pro',monospace;
+	overflow: scroll;
+}
+#nav{
+	height: 100%;
+	background: burlywood;
+	display: none;
+}
+#profile-image{
+	width:200px;
+	margin: auto;
+	height: 200px;
+	border-radius: 100px;
+}
+#content-section{
+	padding:5px;
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+}
+
+div{
+	margin-bottom:5px ;
+}
+div header{
+	font-size: 20px;
+	border-bottom:2px solid whitesmoke;
+}
+a{
+	color:cadetblue;
+	text-decoration:none;
+}
+a:hover{
+	background-color:powderblue;
+	padding:3px;
+	color: green;
+	font-weight: bold;
+	border-radius:3px;
+}

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i7r2!zn_2m($b_ewd#=fnx*ec3j92pbv627)_6^h%83u3nk=o_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'blog.apps.BlogConfig',
     'accounts.apps.AccountsConfig',
 ]
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'blogapp.urls'
@@ -119,6 +121,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[BASE_DIR/'static']
+STATIC_ROOT=BASE_DIR/'staticfiles'
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
